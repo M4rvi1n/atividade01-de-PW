@@ -155,7 +155,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid{
   text-align: center;
 }
 
-/* Acessibilidade visual para leitores de tela / elementos auxiliares */
+
 .visually-hidden{
   position: absolute !important;
   height: 1px; width: 1px;
@@ -168,3 +168,4 @@ input:user-invalid, select:user-invalid, textarea:user-invalid{
 @media (max-width: 720px){
   .form-grid{ grid-template-columns: 1fr; }
 }
+
