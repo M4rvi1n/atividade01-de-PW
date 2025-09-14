@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulário de Inscrição</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Inscrição no Evento</h1>
+      <p class="subtitle">Preencha os campos obrigatórios e envie seu formulário.</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="sec-form" class="container">
+      <h2 id="sec-form" class="visually-hidden">Formulário</h2>
+
+      <form action="#" method="post" novalidate="false" class="card" autocomplete="on">
+    
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <div class="form-control">
+            <label for="nome">Nome Completo <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              autocomplete="name"
+              placeholder="Ex.: Maria Silva"
+            />
+          </div>
+
+          <div class="form-grid">
+            <div class="form-control">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="seuemail@exemplo.com"
+              />
+            </div>
+
+            <div class="form-control">
+              <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                autocomplete="tel"
+                inputmode="numeric"
+                pattern="\\d{10,11}"
+                title="Informe apenas números com DDD (10 ou 11 dígitos)."
+                placeholder="11999999999"
+                aria-describedby="hint-telefone"
+              />
+              <small id="hint-telefone" class="hint">Apenas números, com DDD (ex.: 11987654321).</small>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-control">
+              <label for="nascimento">Data de Nascimento <span aria-hidden="true">*</span></label>
+              <input
+                type="date"
+                id="nascimento"
+                name="nascimento"
+                required
+              />
+            </div>
+
+            <fieldset class="form-control">
+              <legend>Gênero <span aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="genero" value="feminino" required />
+                  Feminino
+                </label>
+                <label>
+                  <input type="radio" name="genero" value="masculino" />
+                  Masculino
+                </label>
+                <label>
+                  <input type="radio" name="genero" value="nao-informar" />
+                  Prefiro não informar
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+   
+        <fieldset>
+          <legend>Tipo de Inscrição</legend>
+
+          <div class="form-control">
+            <label for="tipo">Selecione uma opção <span aria-hidden="true">*</span></label>
+            <select id="tipo" name="tipo" required>
+              <option value="" disabled selected>Escolha...</option>
+              <option value="palestrante">Palestrante</option>
+              <option value="participante">Participante</option>
+              <option value="voluntario">Voluntário</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Mensagem -->
+        <section aria-labelledby="sec-msg">
+          <h3 id="sec-msg" class="visually-hidden">Mensagem</h3>
+
+          <div class="form-control">
+            <label for="mensagem">Mensagem (máx. 200 caracteres)</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              maxlength="200"
+              placeholder="Escreva sua mensagem (opcional)..."
+              aria-describedby="hint-mensagem"
+            ></textarea>
+            <small id="hint-mensagem" class="hint">O campo é opcional. Limite: 200 caracteres.</small>
+          </div>
+        </section>
+
+        <!-- Ações -->
+        <section class="actions" aria-label="Ações do formulário">
+          <button type="submit" class="btn primary">Enviar</button>
+          <button type="reset" class="btn ghost">Limpar</button>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> feito por Marcus Vinícius vulgo Marvin Carfer</p>
+    </div>
+    <script>
+   
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
